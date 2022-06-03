@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>Welcome</title>
+{% endblock title %}
+{% block css %}
+<style>
+    h1 {
+        color: red;
+    }
+
+</style>
+{% endblock css %}
+{% block body %}
+<p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus voluptatem eveniet magni deleniti magnam,
+    laborum nemo debitis, similique commodi praesentium tempora in illum cum? Quas deleniti repudiandae repellat dolores
+    natus.
+</p>
+<h1>
+    This is my first html application
+</h1>
+
+
+{% for x in obj %}
+<h1>{{ x.caption }}</h1>
+<img src="{{x.image.url}}" alt="">
+{% endfor %}
+{% endblock body %}
